@@ -1,0 +1,58 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{reflection}[2][Reflection]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{proposition}[2][Proposition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+ 
+% --------------------------------------------------------------
+%                         Start here
+% --------------------------------------------------------------
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+ 
+\title{Writing Assignment 1}%replace X with the appropriate number
+\author{Vivian Phung\\ \\ %replace with your name
+MATH 295 - Enumerative Combinatorics\\With Professor Amy Myers} 
+
+\maketitle
+\textbf{Section 5.2 Problem 28:} What is the probability that a random 9-digit Social Security number has at least one repeated digit? \\
+
+For each digit of the 9-digit Social Security number, there are ten possible digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9. Therefore, there are $10^9$ possible choices for a 9-digit Social Security number. \\
+
+Since the question asks for the probability of at least one repeated digit, we must divide the possible Social Security numbers with at least one repeated digit by all the possible choices of Social Security numbers. To get all the Social Security numbers with at least one repeated digit, subtract the possible choices for a 9-digit Social Security number by the possible choices of getting a 9-digit Social Security number with distinct digits.\\
+
+The possible choices of getting a 9-digit Social Security number with distinct digits can be found through all possible arrangements of nine out of the possible ten digits which can be calculated through a permutation equivalent to $P(10, 9)$.
+
+\begin{align*}
+= \frac{10^9 - P(10, 9)}{10^9}
+\end{align*}
+
+
+ 
+% --------------------------------------------------------------
+%     You don't have to mess with anything below this line.
+% --------------------------------------------------------------
+ 
+\end{document}
